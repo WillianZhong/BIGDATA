@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: configuration-center
+  cloud:
+    zookeeper:
+      enabled: true  # true:开启zookeeper外部化配置, false:读取本地配置; 
+      connect-string: 127.0.0.1:2181
+      config:
+        root: /config/dev
+        enabled: true
+        watcher:
+          enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
